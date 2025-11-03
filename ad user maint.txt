@@ -1,0 +1,7 @@
+.\Move-DisabledUsers.ps1 -SourceOU "CN=Users,DC=Willamette,DC=edu" -DestinationOU "OU=Disabled Users,DC=Willamette,DC=edu"
+.\Move-DisabledUsers.ps1 -SourceOU "OU=Students,DC=Willamette,DC=edu" -DestinationOU "OU=Disabled Users,DC=Willamette,DC=edu"
+.\Move-DisabledUsers.ps1 -SourceOU "OU=Departments,DC=Willamette,DC=edu" -DestinationOU "OU=Disabled Users,DC=Willamette,DC=edu"
+
+.\Move-EnabledUsers.ps1 -SourceOU "OU=Disabled Users,DC=Willamette,DC=edu" -DestinationOU "OU=Departments,DC=Willamette,DC=edu" -SecurityGroup "All-Faculty"
+.\Move-EnabledUsers.ps1 -SourceOU "OU=Disabled Users,DC=Willamette,DC=edu" -DestinationOU "OU=Departments,DC=Willamette,DC=edu" -SecurityGroup "All-Staff"
+.\Move-EnabledUsers.ps1 -SourceOU "OU=Disabled Users,DC=Willamette,DC=edu" -DestinationOU "OU=Students,DC=Willamette,DC=edu" -SecurityGroup "All-Students"
