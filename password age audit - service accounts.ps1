@@ -1,0 +1,1 @@
+﻿Get-ADUser -Filter '((UserAccountControl -eq 512) -or (UserAccountControl -eq 66048)) ' -searchbase "OU=Special Users,DC=willamette,DC=edu" -SearchScope Subtree -Properties PasswordLastSet,LastLogonTimestamp,UserAccountControl | ft samaccountname,PasswordLastSet,@{N="LastLogonTimestamp";E={[datetime]::FromFileTime($_.LastLogonTimestamp)}}
