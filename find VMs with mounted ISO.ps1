@@ -1,0 +1,1 @@
+﻿Get-VM | Get-CDDrive | where{$_.IsoPath -match '.iso'} | Select @{N='VM';E={$_.Parent.Name}},Name,IsoPath
