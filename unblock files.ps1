@@ -1,0 +1,1 @@
+﻿ dir -Path E:\Software -Recurse | Unblock-File
